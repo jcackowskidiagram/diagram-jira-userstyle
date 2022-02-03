@@ -1,0 +1,23 @@
+{
+    "name": "diagram-jira",
+    "title": "Dark Jira Tweaks",
+    "version": "1.0.0",
+    "license": "MIT",
+    "repository": "vednoc/diagram.jira-userstyle",
+    "private": true,
+    "engines": {
+        "node": ">=12"
+    },
+    "devDependencies": {
+        "updates": "^11.4.0",
+        "versions": "^8.4.3",
+        "eclint": "^2.8.1"
+    },
+    "scripts": {
+        "patch": "versions -p -C patch github.user.styl",
+        "minor": "versions -p -C minor github.user.styl",
+        "major": "versions -p -C major github.user.styl",
+        "lintfix": "eclint fix github.user.styl",
+        "update": "updates -cuU && npm install"
+    }
+}

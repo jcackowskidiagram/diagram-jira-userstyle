@@ -1,0 +1,31 @@
+/* ==UserStyle==
+@name         Diagram-Jira
+@namespace    github.com/jcackowskidiagram/diagram.jira-userstyle
+@description  Tweaks for Diagram Jira
+@author       jcackowskidiagram <jcackowski@wearediagram.com> (https://github.com/jcackowskidiagram/)
+@homepageURL  https://github.com/jcackowskidiagram/diagram.jira-userstyle
+@supportURL   https://github.com/jcackowskidiagram/diagram.jira-userstyle/issues
+@updateURL    https://userstyles.world/api/style/2.user.css
+@version      1.0.0
+@license      MIT
+@preprocessor stylus
+==/UserStyle== */
+
+#page-body > #content {
+    padding: 0 1rem;
+}
+.issue-link-key {
+    background-color: #0000000f;
+}
+.adg3 .details-layout .split-view .simple-issue-list .list-panel .issue-list li.focused a {
+    outline: 2px solid #333;
+    border-radius: 3px;
+}
+.splitview-issue-link img[title*="Sub-Task"] {
+    padding-left: 0;
+    opacity: .25;
+}
+iframe[id^="harvest__toggle-timer"] {
+    height: 100vh !important;
+    position: fixed;
+}
