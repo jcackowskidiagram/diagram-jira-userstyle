@@ -3,7 +3,10 @@
 ![Version](https://img.shields.io/github/v/tag/jcackowskidiagram/diagram.jira-userstyle.svg?label=version&style=flat
 ) 
 
-Tweaks for Diagram Jira, including:
+Userstyle that adds tweaks and fixes for Diagram Jira, including:
 - Harvest wiggle fix
 - Better spacing / padding
 - Better visual contrast in filter view
+
+## Installation
+You have to [install Stylus](https://add0n.com/stylus.html) extension/addon for Chrome or Firefox. Then click the button "[Install directly with Stylus](https://github.com/jcackowskidiagram/diagram.jira-userstyle/raw/main/diagram.jira.user.styl)" at the top of this page.
