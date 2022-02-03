@@ -9,4 +9,5 @@ Userstyle that adds tweaks and fixes for Diagram Jira, including:
 - Better visual contrast in filter view
 
 ## Installation
-You have to [install Stylus](https://add0n.com/stylus.html) extension/addon for Chrome or Firefox. Then click the button "[Install directly with Stylus](https://github.com/jcackowskidiagram/diagram.jira-userstyle/raw/main/diagram.jira.user.styl)" at the top of this page.
+1. First [install Stylus](https://add0n.com/stylus.html) extension/addon for Chrome or Firefox. 
+2. Then [install the userstyle](https://github.com/jcackowskidiagram/diagram.jira-userstyle/raw/main/diagram.jira.user.styl). Stylus will automatically keep this updated.
