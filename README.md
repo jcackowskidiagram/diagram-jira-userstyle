@@ -11,3 +11,6 @@ Userstyle that adds tweaks and fixes for Diagram Jira, including:
 ## Installation
 1. First [install Stylus](https://add0n.com/stylus.html) extension/addon for Chrome or Firefox. 
 2. Then [install the userstyle](https://github.com/jcackowskidiagram/diagram.jira-userstyle/raw/main/diagram.jira.user.styl). Stylus will automatically keep this updated.
+
+## Notes
+This userstyle is written with [Stylus](https://stylus-lang.com/) language, an innovative stylesheet language that compiles down to CSS.
