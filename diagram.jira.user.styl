@@ -10,19 +10,73 @@
 @license      MIT
 @preprocessor stylus
 ==/UserStyle== */
-
 @-moz-document domain("wsoljira.atlassian.net") {
+    scrollbar() {
+        &::-webkit-scrollbar {
+            width: 0.9rem;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: rgba(97, 97, 124, 0.34);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            // border-radius: $border-radius-small;
+            background-color: rgb(97, 97, 124);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+    }
+
+    #ak-side-navigation {
+        * {
+            // scrollbar();
+        }
+    }
+
+    * {
+        scrollbar();
+    }
+
     #page-body > #content {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .ghx-agile #content {
+        margin-left: 0.5rem;
+    }
+
+    .issue-list {
+        li {
+            border-bottom: none !important;
+        }
     }
 
     .issue-link-key {
-        background-color: #0000000f;
+        background-color: rgba(97, 97, 124, 0.16);
     }
 
-    .adg3 .details-layout .split-view .simple-issue-list .list-panel .issue-list li.focused a {
-        outline: 2px solid #333;
-        border-radius: 3px;
+    .adg3 {
+        .details-layout .split-view .simple-issue-list .list-panel .issue-list li.focused a {
+            outline: 2px solid #333;
+            border-radius: 3px;
+        }
+
+        .navigator-group {
+            padding: 0;
+        }
+
+        .details-layout {
+            .split-view {
+                .simple-issue-list {
+                    .issue-link-key {
+                        color: #111;
+                    }
+                }
+            }
+        }
     }
 
     .splitview-issue-link img[title*='Sub-Task'] {
@@ -30,8 +84,7 @@
         opacity: 0.25;
     }
 
-    // iframe[id^='harvest__toggle-timer'] {
-    //     height: 100vh !important;
-    //     position: fixed;
-    // }
+    [data-component-selector='jira.issue-view.issue-details.full-size-mode-column'] {
+        padding: 0 1rem 0 0.5rem;
+    }
 }
