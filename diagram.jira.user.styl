@@ -10,7 +10,6 @@
 @license      MIT
 @preprocessor stylus
 ==/UserStyle== */
-
 @-moz-document domain("wsoljira.atlassian.net") {
     color-custom-darkgrey = rgb(97, 97, 124)
     color-custom-green = hsl(120deg, 100%, 35%)
@@ -42,21 +41,22 @@
         padding: 0 0.5rem;
     }
 
-    // hide "You're in a company-managed project"
-    #ak-side-navigation {
-        nav {
-            >div:last-child {
-                display: none;
-            }
+    #jira-frontend {
+        #ak-side-navigation {
+            nav {
+                >div:last-child {
+                    display: none;
+                }
 
-            >div:first-child {
-                border-bottom: 1px solid rgba(color-custom-darkgrey, 0.5);
-                box-shadow: 0 0 5px rgba(color-custom-darkgrey, 1);
-                margin-bottom: 0.25rem;
-                margin-left: 0;
+                >div:first-child {
+                    border-bottom: 1px solid rgba(color-custom-darkgrey, 0.5);
+                    box-shadow: 0 0 5px rgba(color-custom-darkgrey, 1);
+                    margin-bottom: 0.25rem;
+                    margin-left: 0;
 
-                div[data-navheader] {
-                    padding: 0.25rem;
+                    div[data-navheader] {
+                        padding: 0.25rem;
+                    }
                 }
             }
         }
