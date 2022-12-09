@@ -10,6 +10,7 @@
 @license      MIT
 @preprocessor stylus
 ==/UserStyle== */
+
 @-moz-document domain("wsoljira.atlassian.net") {
     color-custom-darkgrey = rgb(97, 97, 124)
     color-custom-green = hsl(120deg, 100%, 35%)
@@ -58,6 +59,15 @@
                     padding: 0.25rem;
                 }
             }
+        }
+    }
+
+    #ak-main-content {
+        div[data-testid='rapidboard-breadcrumbs'] {
+            padding: 0.5rem 1rem;
+            height: auto;
+            margin: 0 0 0.5rem 0;
+            box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
         }
     }
 
