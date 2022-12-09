@@ -6,33 +6,30 @@
 @homepageURL  https://github.com/jcackowskidiagram/diagram.jira-userstyle
 @supportURL   https://github.com/jcackowskidiagram/diagram.jira-userstyle/issues
 @updateURL    https://github.com/jcackowskidiagram/diagram.jira-userstyle/raw/main/diagram.jira.user.styl
-@version      1.0.1
+@version      1.0.2
 @license      MIT
 @preprocessor stylus
 ==/UserStyle== */
 @-moz-document domain("wsoljira.atlassian.net") {
+    color-custom-darkgrey = rgb(97, 97, 124)
+    color-custom-green = hsl(120deg, 100%, 35%)
+
     scrollbar() {
         &::-webkit-scrollbar {
-            width: 0.9rem;
+            width: 0.75rem;
         }
 
         &::-webkit-scrollbar-track {
-            background-color: rgba(97, 97, 124, 0.34);
+            background-color: rgba(color-custom-darkgrey, 0.3);
             border-radius: 1rem;
             overflow: hidden;
         }
 
         &::-webkit-scrollbar-thumb {
             // border-radius: $border-radius-small;
-            background-color: rgb(97, 97, 124);
+            background-color: rgba(color-custom-darkgrey, 0.8);
             border-radius: 1rem;
             overflow: hidden;
-        }
-    }
-
-    #ak-side-navigation {
-        * {
-            // scrollbar();
         }
     }
 
@@ -44,8 +41,28 @@
         padding: 0 0.5rem;
     }
 
+    // hide "You're in a company-managed project"
+    #ak-side-navigation {
+        nav {
+            >div:last-child {
+                display: none;
+            }
+
+            >div:first-child {
+                border-bottom: 1px solid rgba(color-custom-darkgrey, 0.5);
+                box-shadow: 0 0 5px rgba(color-custom-darkgrey, 1);
+                margin-bottom: 0.25rem;
+                margin-left: 0;
+
+                div[data-navheader] {
+                    padding: 0.25rem;
+                }
+            }
+        }
+    }
+
     .ghx-agile #content {
-        margin-left: 0.5rem;
+        margin-left: 1rem;
     }
 
     .issue-list {
@@ -55,13 +72,54 @@
     }
 
     .issue-link-key {
-        background-color: rgba(97, 97, 124, 0.16);
+        background-color: rgba(color-custom-darkgrey, 0.16);
+    }
+
+    .ghx-backlog-container {
+        .ghx-backlog-header {
+            border-width: 0 0 1px 0;
+            border-color: rgba(color-custom-darkgrey, 0.25);
+            border-style: solid;
+            background-color: rgba(color-custom-darkgrey, 0.05);
+        }
     }
 
     .adg3 {
-        .details-layout .split-view .simple-issue-list .list-panel .issue-list li.focused a {
-            outline: 2px solid #333;
-            border-radius: 3px;
+        .ghx-backlog-container {
+            border-width: 1px 0 0 3px;
+            border-style: solid;
+            border-color: rgba(color-custom-darkgrey, 0.25);
+        }
+
+        .ghx-sprint-group {
+            .ghx-backlog-container {
+                border-left-color: color-custom-green;
+
+                .ghx-backlog-header {
+                    background-color: rgba(color-custom-green, 0.05);
+                }
+
+                ~ .ghx-backlog-container {
+                    border-color: rgba(color-custom-darkgrey, 0.25);
+
+                    .ghx-backlog-header {
+                        background-color: rgba(color-custom-darkgrey, 0.05);
+                    }
+                }
+            }
+        }
+
+        // style the backlog with a dashed boarder
+        .ghx-backlog-group {
+            .ghx-backlog-container {
+                border-style: dashed;
+            }
+        }
+
+        &.bento-enabled {
+            #ghx-backlog {
+                padding-right: 2px;
+            }
         }
 
         .navigator-group {
@@ -73,6 +131,11 @@
                 .simple-issue-list {
                     .issue-link-key {
                         color: #111;
+                    }
+
+                    .list-panel .issue-list li.focused a {
+                        outline: 2px solid #333;
+                        border-radius: 3px;
                     }
                 }
             }
