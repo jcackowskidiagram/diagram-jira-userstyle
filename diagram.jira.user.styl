@@ -11,8 +11,8 @@
 @preprocessor stylus
 ==/UserStyle== */
 @-moz-document domain("wsoljira.atlassian.net") {
-    color-custom-darkgrey = rgb(97, 97, 124)
-    color-custom-green = hsl(120deg, 100%, 35%)
+    color-custom-darkgrey = rgb(97, 97, 124);
+    color-custom-green = hsl(120deg, 100%, 35%);
 
     scrollbar() {
         &::-webkit-scrollbar {
@@ -140,7 +140,7 @@
             .split-view {
                 .simple-issue-list {
                     .issue-link-key {
-                        color: #111;
+                        color: #fff;
                     }
 
                     .list-panel .issue-list li.focused a {
@@ -159,5 +159,15 @@
 
     [data-component-selector='jira.issue-view.issue-details.full-size-mode-column'] {
         padding: 0 1rem 0 0.5rem;
+    }
+
+    html[data-theme='dark'] {
+        [data-test-id='issue.views.field.rich-text.description'] {
+            .ak-editor-panel {
+                h1, h2, h3, h4, h5, h6, p, ul, ol {
+                    color: #000;
+                }
+            }
+        }
     }
 }
