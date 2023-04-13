@@ -26,7 +26,6 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            // border-radius: $border-radius-small;
             background-color: rgba(color-custom-darkgrey, 0.8);
             border-radius: 1rem;
             overflow: hidden;
@@ -50,12 +49,12 @@
 
                 >div:first-child {
                     border-bottom: 1px solid rgba(color-custom-darkgrey, 0.5);
-                    box-shadow: 0 0 5px rgba(color-custom-darkgrey, 1);
                     margin-bottom: 0.25rem;
                     margin-left: 0;
 
                     div[data-navheader] {
                         padding: 0.25rem;
+                        padding-top: 0.4rem !important;
                     }
                 }
             }
@@ -91,6 +90,10 @@
             border-color: rgba(color-custom-darkgrey, 0.25);
             border-style: solid;
             background-color: rgba(color-custom-darkgrey, 0.05);
+
+            .ghx-issue-count {
+                /* color: color-custom-green; */
+            }
         }
     }
 
